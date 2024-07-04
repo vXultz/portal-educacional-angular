@@ -1,1 +1,9 @@
-<p>disciplinas works!</p>
+<div class="disciplinas-container">
+  <h2>Disciplinas do Curso: {{ cursoAtual }}</h2>
+  <div *ngFor="let semestre of disciplinasPorSemestre">
+    <h3>{{ semestre.nome }}</h3>
+    <ul>
+      <li *ngFor="let disciplina of semestre.disciplinas">{{ disciplina }}</li>
+    </ul>
+  </div>
+</div>
