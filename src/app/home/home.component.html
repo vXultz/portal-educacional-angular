@@ -1,1 +1,35 @@
-<p>home works!</p>
+<div class="home-container">
+  <h2>Bem-vindo ao Portal Educacional</h2>
+
+  <div class="section">
+    <h3>Próximas Atividades</h3>
+    <div class="cards-container">
+      <div class="card" *ngFor="let atividade of proximasAtividades">
+        <h4>{{ atividade.titulo }}</h4>
+        <p>{{ atividade.descricao }}</p>
+        <p><strong>Data:</strong> {{ atividade.data | date:'shortDate' }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Minhas Disciplinas</h3>
+    <div class="cards-container">
+      <div class="card" *ngFor="let disciplina of minhasDisciplinas">
+        <h4>{{ disciplina.nome }}</h4>
+        <p>{{ disciplina.descricao }}</p>
+        <p><strong>Semestre:</strong> {{ disciplina.semestre }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Cursos Extras</h3>
+    <div class="cards-container">
+      <div class="card" *ngFor="let curso of cursosExtras">
+        <h4>{{ curso.nome }}</h4>
+        <p>{{ curso.descricao }}</p>
+      </div>
+    </div>
+  </div>
+</div>
